@@ -1,4 +1,4 @@
-import { h } from 'https://unpkg.com/ketojs@1.0.0/dist/keto.js';
+import { h } from 'https://unpkg.com/ketojs@1.0.0';
 
 // h('form', { class: 'login-form', action: 'login' }, [
 // 	h('input', { type: 'text', name: 'user' }),
