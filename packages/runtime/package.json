@@ -1,8 +1,11 @@
 {
 	"name": "ketojs",
 	"version": "1.0.1",
+	"type": "module",
 	"description": "Blazing fast, lightweight and modern JavaScript framework for building reusable and scalable UIs.",
+	"exports": "./dist/keto.js",
 	"main": "dist/keto.js",
+	"module": "dist/keto.js",
 	"files": [
 		"dist/keto.js"
 	],
@@ -15,7 +18,16 @@
 		"test:run": "vitest run"
 	},
 	"keywords": [
-		"ketojs"
+		"ketojs",
+		"javascript",
+		"framework",
+		"ui",
+		"library",
+		"lightweight",
+		"modern",
+		"fast",
+		"scalable",
+		"reusable"
 	],
 	"author": "Claudius A.",
 	"license": "MIT",

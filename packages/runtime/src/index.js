@@ -1,1 +1,1 @@
-console.log('Testing this new framework... Keto to the WORLD!');
+export { DOM_TYPES, h, hFragment, hString } from './h'

@@ -1,0 +1,21 @@
+class Todo {
+	constructor() {
+		this.todos = [];
+	}
+
+	create(todo) {
+		this.todos.push(todo);
+	}
+
+	delete(idx) {
+		this.todos.splice(idx, 1);
+	}
+
+	edit(idx, newTodo) {
+		if (!(idx >= 0 && idx < this.todos.length)) throw new Error('Todo item not found!');
+
+		return (this.todos[idx] = newTodo);
+	}
+}
+
+module.exports = Todo;
