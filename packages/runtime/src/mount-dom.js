@@ -2,8 +2,9 @@ import { DOM_TYPES } from './h'
 import { addEventListeners } from './events'
 import { setAttributes } from './attributes'
 
-function mountDOM(vDOM, parentEl) {
-	switch (vDOM.type) {
+export function mountDOM(vDOM, parentEl) {
+	const { type } = vDOM
+	switch (type) {
 		case DOM_TYPES.TEXT:
 			createTextNode(vDOM, parentEl)
 			break
@@ -17,7 +18,7 @@ function mountDOM(vDOM, parentEl) {
 			break
 
 		default:
-			throw new Error(`Can't mount DOM of type: ${vDOM.type}`)
+			throw new Error(`Can't mount DOM of type: ${type}`)
 	}
 }
 
@@ -31,7 +32,7 @@ function createTextNode(vDOM, parentEl) {
 function createFragmentNodes(vDOM, parentEl) {
 	const { children } = vDOM
 	vDOM.el = parentEl
-	children.forEach((child) => mountDOM(child, parentEl))
+	children.forEach(child => mountDOM(child, parentEl))
 }
 
 function createElementNode(vDOM, parentEl) {
@@ -39,7 +40,7 @@ function createElementNode(vDOM, parentEl) {
 	const element = document.createElement(tag)
 	addProps(element, props, vDOM)
 	vDOM.el = element
-	children.forEach((child) => mountDOM(child, element))
+	children.forEach(child => mountDOM(child, element))
 	parentEl.append(element)
 }
 
