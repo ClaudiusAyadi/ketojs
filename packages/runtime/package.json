@@ -1,6 +1,6 @@
 {
 	"name": "ketojs",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"type": "module",
 	"description": "Blazing fast, lightweight and modern JavaScript framework for building reusable and scalable UIs.",
 	"exports": "./dist/keto.js",
