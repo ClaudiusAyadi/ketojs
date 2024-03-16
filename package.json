@@ -1,7 +1,7 @@
 {
 	"name": "ketojs",
 	"description": "Blazing fast, lightweight and modern JavaScript framework for building reusable and scalable UIs.",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"type": "module",
 	"author": "Claudius A.",
 	"license": "MIT",

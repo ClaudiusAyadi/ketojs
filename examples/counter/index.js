@@ -1,4 +1,4 @@
-import { createApp, h, hS, hF } from '../../packages/keto/dist/keto.js';
+import { createApp, h, hS, hF } from 'https://unpkg.com/ketojs@1';
 
 // function Counter() {
 // 	const count = 0;
