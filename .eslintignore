@@ -1,4 +1,4 @@
-# NOTE: Should be in sync with .eslintignore
+# NOTE: Should be in sync with .prettierignore
 
 dist
 node_modules

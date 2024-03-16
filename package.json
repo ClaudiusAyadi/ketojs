@@ -1,18 +1,22 @@
 {
-	"private": true,
+	"name": "ketojs-monorepo",
+	"description": "Monorepo for ketojs framework",
 	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"author": "Claudius A.",
+	"license": "MIT",
 	"packageManager": "pnpm@8.15.4",
-	"description": "",
+	"engines": {
+		"pnpm": ">=8.0.0",
+		"node": ">=18.0.0"
+	},
 	"workspaces": [
-		"packages/compiler",
-		"packages/loader",
-		"packages/runtime"
+		"packages/*"
 	],
 	"keywords": [
 		"ketojs"
 	],
-	"author": "Claudius A.",
-	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/ClaudiusAyadi/ketojs.git"
@@ -20,5 +24,28 @@
 	"bugs": {
 		"url": "https://github.com/ClaudiusAyadi/ketojs/issues"
 	},
-	"homepage": "https://github.com/ClaudiusAyadi/ketojs#readme"
+	"homepage": "https://github.com/ClaudiusAyadi/ketojs#readme",
+	"scripts": {
+		"serve": "serve",
+		"build": "rollup -c",
+		"chk": "cd ./packages/keto",
+		"dev": "rollup -c -w",
+		"format": "prettier --write --cache .",
+		"format-check": "prettier --check --cache .",
+		"lint": "eslint --cache --ext .js . --ignore-path .gitignore",
+		"lint:fix": "eslint --cache --ext .js . --ignore-path .gitignore",
+		"prepublishOnly": "pnpm chk && pnpm build",
+		"test": "vitest",
+		"test:run": "vitest run"
+	},
+	"devDependencies": {
+		"eslint": "^8.57.0",
+		"jsdom": "^24.0.0",
+		"prettier": "^3.2.5",
+		"rollup": "^4.12.1",
+		"rollup-plugin-cleanup": "^3.2.1",
+		"rollup-plugin-filesize": "^10.0.0",
+		"serve": "^14.2.1",
+		"vitest": "^1.3.1"
+	}
 }

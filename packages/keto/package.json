@@ -1,0 +1,29 @@
+{
+	"name": "ketojs",
+	"description": "Blazing fast, lightweight and modern JavaScript framework for building reusable and scalable UIs.",
+	"version": "1.0.3",
+	"type": "module",
+	"author": "Claudius A.",
+	"license": "MIT",
+	"files": [
+		"dist/keto.js"
+	],
+	"module": "dist/keto.js",
+	"main": "dist/keto.js",
+	"exports": "./dist/keto.js",
+	"keywords": [
+		"ketojs",
+		"keto framework",
+		"JavaScript framework",
+		"js framework"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ClaudiusAyadi/ketojs.git",
+		"directory": "packages/runtime"
+	},
+	"bugs": {
+		"url": "https://github.com/ClaudiusAyadi/ketojs/issues"
+	},
+	"homepage": "https://github.com/ClaudiusAyadi/ketojs#readme"
+}

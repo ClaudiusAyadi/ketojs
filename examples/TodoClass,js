@@ -1,21 +1,22 @@
 class Todo {
 	constructor() {
-		this.todos = [];
+		this.todos = []
 	}
 
 	create(todo) {
-		this.todos.push(todo);
+		this.todos = [...this.todos, todo]
+	}
+
+	update(idx, newTodo) {
+		if (!(idx >= 0 && idx < this.todos.length))
+			throw new Error('Todo item not found!')
+
+		return (this.todos[idx] = newTodo)
 	}
 
 	delete(idx) {
-		this.todos.splice(idx, 1);
-	}
-
-	edit(idx, newTodo) {
-		if (!(idx >= 0 && idx < this.todos.length)) throw new Error('Todo item not found!');
-
-		return (this.todos[idx] = newTodo);
+		this.todos = this.todos.filter((_, i) => i !== idx)
 	}
 }
 
-module.exports = Todo;
+module.exports = Todo

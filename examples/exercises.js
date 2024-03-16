@@ -1,4 +1,4 @@
-import { h, hString, hFragment } from 'https://unpkg.com/ketojs@1.0.0';
+import { h, hString, hFragment } from 'https://unpkg.com/ketojs@1';
 
 hFragment([
 	h('h1', { class: 'title' }, ['My counter']),

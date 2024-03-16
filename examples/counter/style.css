@@ -1,0 +1,15 @@
+body {
+	text-align: center;
+	margin: 2em;
+	font-size: 2em;
+}
+button {
+	font-size: 1em;
+	width: 1.5em;
+}
+span {
+	margin: 0 1em;
+}
+span.negative {
+	color: #e91e61;
+}
