@@ -1,8 +1,7 @@
 {
-	"name": "ketojs-monorepo",
-	"description": "Monorepo for ketojs framework",
-	"version": "1.0.0",
-	"private": true,
+	"name": "ketojs",
+	"description": "Blazing fast, lightweight and modern JavaScript framework for building reusable and scalable UIs.",
+	"version": "1.0.3",
 	"type": "module",
 	"author": "Claudius A.",
 	"license": "MIT",
@@ -11,11 +10,20 @@
 		"pnpm": ">=8.0.0",
 		"node": ">=18.0.0"
 	},
+	"files": [
+		"dist/keto.js"
+	],
+	"module": "dist/keto.js",
+	"main": "dist/keto.js",
+	"exports": "./dist/keto.js",
 	"workspaces": [
 		"packages/*"
 	],
 	"keywords": [
-		"ketojs"
+		"ketojs",
+		"keto framework",
+		"JavaScript framework",
+		"js framework"
 	],
 	"repository": {
 		"type": "git",
@@ -28,13 +36,12 @@
 	"scripts": {
 		"serve": "serve",
 		"build": "rollup -c",
-		"chk": "cd ./packages/keto",
 		"dev": "rollup -c -w",
 		"format": "prettier --write --cache .",
 		"format-check": "prettier --check --cache .",
 		"lint": "eslint --cache --ext .js . --ignore-path .gitignore",
 		"lint:fix": "eslint --cache --ext .js . --ignore-path .gitignore",
-		"prepublishOnly": "pnpm chk && pnpm build",
+		"prepublishOnly": "pnpm build",
 		"test": "vitest",
 		"test:run": "vitest run"
 	},

@@ -4,6 +4,6 @@ import { defineConfig } from 'rollup';
 
 export default defineConfig({
 	input: 'packages/keto/src/index.js',
-	output: [{ file: 'packages/keto/dist/keto.js', format: 'esm', name: 'keto' }],
+	output: [{ file: 'dist/keto.js', format: 'esm', name: 'keto' }],
 	plugins: [cleanup(), filesize()]
 });
